@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b3dab38db94042a6032d666a689ba, type: 3}
+  m_Name: Thefinal
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: d102bf61-6849-4055-8adf-da6ca61df07e
+    portName: StartNodeEdge
+    secondNodeID: a33e29be-81fb-4b01-aa6f-13ef1d8faedd
+  - firstNodeID: a33e29be-81fb-4b01-aa6f-13ef1d8faedd
+    portName: Its finally gonna work
+    secondNodeID: f63242b9-a644-439e-8ee4-243b4aef88a3
+  - firstNodeID: a33e29be-81fb-4b01-aa6f-13ef1d8faedd
+    portName: i wouldnt get your hopes up
+    secondNodeID: f63242b9-a644-439e-8ee4-243b4aef88a3
+  - firstNodeID: f63242b9-a644-439e-8ee4-243b4aef88a3
+    portName: Wow it worked
+    secondNodeID: 82e7327e-6048-4294-9646-0acc7163dcb7
+  NodeData:
+  - nodeID: 82e7327e-6048-4294-9646-0acc7163dcb7
+    dialogueTxt: End
+    dialogueKey: 000
+    position: {x: 948, y: 163}
+  - nodeID: f63242b9-a644-439e-8ee4-243b4aef88a3
+    dialogueTxt: Wow it actually worked
+    dialogueKey: 000
+    position: {x: 613, y: 185}
+  - nodeID: a33e29be-81fb-4b01-aa6f-13ef1d8faedd
+    dialogueTxt: This is it
+    dialogueKey: 000
+    position: {x: 262, y: 177}

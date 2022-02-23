@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b3dab38db94042a6032d666a689ba, type: 3}
+  m_Name: mainDialogue1
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: 3fbd2714-5d0f-415f-87a6-2481cd16ad9c
+    portName: StartNodeEdge
+    secondNodeID: 937233ec-8086-4430-8af2-eeddc669d19c
+  - firstNodeID: 937233ec-8086-4430-8af2-eeddc669d19c
+    portName: Hey Im Good thanks and you?
+    secondNodeID: 9cce6d8a-062b-4f3e-8bab-25ec078185ba
+  - firstNodeID: 9cce6d8a-062b-4f3e-8bab-25ec078185ba
+    portName: Well Nice to meet you to Shane, My name is Casey.
+    secondNodeID: 23230d07-7573-438a-87e4-eebc450e0cb5
+  - firstNodeID: 9cce6d8a-062b-4f3e-8bab-25ec078185ba
+    portName: I think i would have to get to know you better before giving my name
+    secondNodeID: 23230d07-7573-438a-87e4-eebc450e0cb5
+  - firstNodeID: 302c25a0-2519-4120-b01e-66280c5e8fa1
+    portName: Thanks, I appreciate it
+    secondNodeID: db8d01e9-083b-4963-a1e8-fc7a88bbd5e3
+  - firstNodeID: 23230d07-7573-438a-87e4-eebc450e0cb5
+    portName: That would be amazing, thank you!
+    secondNodeID: 302c25a0-2519-4120-b01e-66280c5e8fa1
+  - firstNodeID: 23230d07-7573-438a-87e4-eebc450e0cb5
+    portName: No thank you, I already have one
+    secondNodeID: 49128477-3997-4885-94bf-e76edbb63271
+  - firstNodeID: 49128477-3997-4885-94bf-e76edbb63271
+    portName: Lets do it!
+    secondNodeID: d31be0d9-1629-4a76-9254-3aa8ec6dc851
+  NodeData:
+  - nodeID: 937233ec-8086-4430-8af2-eeddc669d19c
+    dialogueTxt: Hey! How are you doing?
+    dialogueKey: 000
+    position: {x: 279, y: 210}
+  - nodeID: 9cce6d8a-062b-4f3e-8bab-25ec078185ba
+    dialogueTxt: Very Well Thanks! Im Shane, Nice to meet You
+    dialogueKey: 000
+    position: {x: 665, y: 214}
+  - nodeID: db8d01e9-083b-4963-a1e8-fc7a88bbd5e3
+    dialogueTxt: EndOne
+    dialogueKey: 000
+    position: {x: 2253, y: 210}
+  - nodeID: 302c25a0-2519-4120-b01e-66280c5e8fa1
+    dialogueTxt: Alright, Lets Go
+    dialogueKey: 000
+    position: {x: 1816, y: 150}
+  - nodeID: 23230d07-7573-438a-87e4-eebc450e0cb5
+    dialogueTxt: Could i offer you a drink Casey?
+    dialogueKey: 000
+    position: {x: 1360, y: 229}
+  - nodeID: 49128477-3997-4885-94bf-e76edbb63271
+    dialogueTxt: Well, shall we go hit the dance floor?
+    dialogueKey: 001
+    position: {x: 1815, y: 343}
+  - nodeID: d31be0d9-1629-4a76-9254-3aa8ec6dc851
+    dialogueTxt: EndTwo
+    dialogueKey: 000
+    position: {x: 2300, y: 407}

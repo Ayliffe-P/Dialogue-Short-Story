@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b3dab38db94042a6032d666a689ba, type: 3}
+  m_Name: sm
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: 313e56f3-d43a-42e2-b618-99d62acc90b6
+    portName: StartNodeEdge
+    secondNodeID: c0321edf-7067-43ff-808e-64af47b23110
+  - firstNodeID: c0321edf-7067-43ff-808e-64af47b23110
+    portName: Im good thanks and you
+    secondNodeID: 39a22f4c-95b5-485a-8435-e88546346431
+  - firstNodeID: c0321edf-7067-43ff-808e-64af47b23110
+    portName: Doing terribly
+    secondNodeID: 195e1069-5f77-4d2a-a3eb-cbe34d05ade9
+  - firstNodeID: 195e1069-5f77-4d2a-a3eb-cbe34d05ade9
+    portName: What can you do
+    secondNodeID: aa8c7c2b-2c4d-4da8-b6f7-76fb66121d01
+  - firstNodeID: 195e1069-5f77-4d2a-a3eb-cbe34d05ade9
+    portName: Thats life
+    secondNodeID: aa8c7c2b-2c4d-4da8-b6f7-76fb66121d01
+  - firstNodeID: 39a22f4c-95b5-485a-8435-e88546346431
+    portName: Some fluff
+    secondNodeID: 77f7b229-a558-4174-8b69-beffb6756720
+  - firstNodeID: 77f7b229-a558-4174-8b69-beffb6756720
+    portName: Yes
+    secondNodeID: aa8c7c2b-2c4d-4da8-b6f7-76fb66121d01
+  - firstNodeID: 77f7b229-a558-4174-8b69-beffb6756720
+    portName: No
+    secondNodeID: aa8c7c2b-2c4d-4da8-b6f7-76fb66121d01
+  - firstNodeID: 39a22f4c-95b5-485a-8435-e88546346431
+    portName: more fluff text
+    secondNodeID: 77f7b229-a558-4174-8b69-beffb6756720
+  NodeData:
+  - nodeID: c0321edf-7067-43ff-808e-64af47b23110
+    dialogueTxt: Hi, How are you
+    dialogueKey: 000
+    position: {x: 367, y: 223}
+  - nodeID: 195e1069-5f77-4d2a-a3eb-cbe34d05ade9
+    dialogueTxt: Oh dear
+    dialogueKey: 000
+    position: {x: 924, y: 395}
+  - nodeID: aa8c7c2b-2c4d-4da8-b6f7-76fb66121d01
+    dialogueTxt: End
+    dialogueKey: 000
+    position: {x: 1540, y: -81}
+  - nodeID: 39a22f4c-95b5-485a-8435-e88546346431
+    dialogueTxt: Thats good, im alright thanks
+    dialogueKey: 000
+    position: {x: 821, y: 129}
+  - nodeID: 77f7b229-a558-4174-8b69-beffb6756720
+    dialogueTxt: Want to get a drink?
+    dialogueKey: 003
+    position: {x: 1403, y: 316}

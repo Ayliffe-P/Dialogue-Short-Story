@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b3dab38db94042a6032d666a689ba, type: 3}
+  m_Name: ds
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: 68434170-2e01-4e09-b260-a5146acdae91
+    portName: StartNodeEdge
+    secondNodeID: 4cfb2a8f-ea41-4418-8195-267e8854f290
+  - firstNodeID: 4cfb2a8f-ea41-4418-8195-267e8854f290
+    portName: No ways man
+    secondNodeID: 9103fe9c-3fa8-4b9c-ab49-5c90ab8de14f
+  - firstNodeID: 4cfb2a8f-ea41-4418-8195-267e8854f290
+    portName: Im good thanks and yourself?
+    secondNodeID: f9aea649-6f41-4887-8666-162c9dad22c9
+  NodeData:
+  - nodeID: 9103fe9c-3fa8-4b9c-ab49-5c90ab8de14f
+    dialogueTxt: Well okay
+    dialogueKey: 003
+    position: {x: 879, y: 151}
+  - nodeID: f9aea649-6f41-4887-8666-162c9dad22c9
+    dialogueTxt: End
+    dialogueKey: 000
+    position: {x: 1103, y: 337}
+  - nodeID: 4cfb2a8f-ea41-4418-8195-267e8854f290
+    dialogueTxt: Hi, how are you?
+    dialogueKey: 000
+    position: {x: 347, y: 188}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5176dc0d5a0c414faa1c9a98d67d5a8, type: 3}
+  m_Name: test 4
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: 24feda55-139d-40d9-abf4-cdbc57d8c3a0
+    portName: StartNodeEdge
+    secondNodeID: bc992cb1-6cee-44f5-8ab0-b527c88c5896
+  - firstNodeID: bc992cb1-6cee-44f5-8ab0-b527c88c5896
+    portName: This is for testing purposes
+    secondNodeID: 774f031a-3c09-49fb-bbba-7e07855ee933
+  - firstNodeID: 774f031a-3c09-49fb-bbba-7e07855ee933
+    portName: Anyways
+    secondNodeID: d25d7aff-a17c-47b7-8517-5934ea02257e
+  NodeData:
+  - nodeID: 774f031a-3c09-49fb-bbba-7e07855ee933
+    dialogueTxt: How intersting
+    dialogueKey: 000
+    position: {x: 664, y: 187}
+  - nodeID: bc992cb1-6cee-44f5-8ab0-b527c88c5896
+    dialogueTxt: Test 4
+    dialogueKey: 000
+    position: {x: 289, y: 192}
+  - nodeID: d25d7aff-a17c-47b7-8517-5934ea02257e
+    dialogueTxt: End
+    dialogueKey: 000
+    position: {x: 907, y: 191}

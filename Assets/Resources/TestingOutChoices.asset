@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5176dc0d5a0c414faa1c9a98d67d5a8, type: 3}
+  m_Name: TestingOutChoices
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: 38e42533-6d05-49ea-afd1-3cdbebc3e32e
+    portName: StartNodeEdge
+    secondNodeID: 63a68ec6-b55d-4125-8fa5-14f7a623e875
+  - firstNodeID: 63a68ec6-b55d-4125-8fa5-14f7a623e875
+    portName: Choose this option
+    secondNodeID: e27a0804-6bef-4d21-ac94-bcf9bc6436b8
+  - firstNodeID: 63a68ec6-b55d-4125-8fa5-14f7a623e875
+    portName: Nooo choose this one
+    secondNodeID: e27a0804-6bef-4d21-ac94-bcf9bc6436b8
+  NodeData:
+  - nodeID: e27a0804-6bef-4d21-ac94-bcf9bc6436b8
+    dialogueTxt: Well, we ended up in the same place
+    dialogueKey: 000
+    position: {x: 659, y: 174}
+  - nodeID: 63a68ec6-b55d-4125-8fa5-14f7a623e875
+    dialogueTxt: This is node 1
+    dialogueKey: 000
+    position: {x: 268, y: 160}
