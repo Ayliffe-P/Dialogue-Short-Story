@@ -61,8 +61,8 @@ public class FactorySpawner : MonoBehaviour
             anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Sprites/Man 2 Sprite Sheet_0");
 
             gameObject.tag = "NPC";
-            gameObject.AddComponent<NewDialogueTrigger>();
-            gameObject.GetComponent<NewDialogueTrigger>().dialogue = RandomScriptableDialogue();
+            gameObject.AddComponent<GraphDialogueTrigger>();
+            gameObject.GetComponent<GraphDialogueTrigger>().dialogue = RandomScriptableDialogue();
 
             target = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
             anim = GetComponent<Animator>();
@@ -95,8 +95,8 @@ public class FactorySpawner : MonoBehaviour
             anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Sprites/Woman Spritesheet_0");
 
             gameObject.tag = "NPC";
-            gameObject.AddComponent<NewDialogueTrigger>();
-            gameObject.GetComponent<NewDialogueTrigger>().dialogue = RandomScriptableDialogue();
+            gameObject.AddComponent<GraphDialogueTrigger>();
+            gameObject.GetComponent<GraphDialogueTrigger>().dialogue = RandomScriptableDialogue();
 
             target = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
             anim = GetComponent<Animator>();
@@ -129,8 +129,8 @@ public class FactorySpawner : MonoBehaviour
             anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Sprites/Girl 2 Sprite Sheet 1_0");
 
             gameObject.tag = "NPC";
-            gameObject.AddComponent<NewDialogueTrigger>();
-            gameObject.GetComponent<NewDialogueTrigger>().dialogue = RandomScriptableDialogue();
+            gameObject.AddComponent<GraphDialogueTrigger>();
+            gameObject.GetComponent<GraphDialogueTrigger>().dialogue = RandomScriptableDialogue();
 
             target = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
             anim = GetComponent<Animator>();
@@ -163,8 +163,8 @@ public class FactorySpawner : MonoBehaviour
             anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Sprites/Man 3 Sprite Sheet_0");
 
             gameObject.tag = "NPC";
-            gameObject.AddComponent<NewDialogueTrigger>();
-            gameObject.GetComponent<NewDialogueTrigger>().dialogue = RandomScriptableDialogue();
+            gameObject.AddComponent<GraphDialogueTrigger>();
+            gameObject.GetComponent<GraphDialogueTrigger>().dialogue = RandomScriptableDialogue();
 
             target = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).transform;
             anim = GetComponent<Animator>();

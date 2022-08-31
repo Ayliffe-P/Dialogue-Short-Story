@@ -65,10 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BarmanDialogueTrigger.cs" />
-    <Compile Include="Assets\Dialogue.cs" />
-    <Compile Include="Assets\DialogueManager.cs" />
-    <Compile Include="Assets\DialogueTrigger.cs" />
-    <Compile Include="Assets\DoubleLinkedList.cs" />
     <Compile Include="Assets\FactorySpawner.cs" />
     <Compile Include="Assets\InventoryManager.cs" />
     <Compile Include="Assets\NPC.cs" />
@@ -76,54 +72,80 @@
     <Compile Include="Assets\ObjectiveManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueNodeData.cs" />
     <Compile Include="Assets\Scripts\Dialogue\EdgeData.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\NewDialogueManager.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\NewDialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\GraphDialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\GraphDialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Dialogue\ScriptableDialogue.cs" />
     <Compile Include="Assets\Scripts\Graph.cs" />
     <Compile Include="Assets\ShaneScript.cs" />
     <Compile Include="Assets\State.cs" />
     <Compile Include="Assets\StateMachine.cs" />
+    <Compile Include="Assets\UIFadeout.cs" />
+    <Compile Include="Assets\danceFloorScript.cs" />
+    <Compile Include="Assets\explanationUI.cs" />
     <Compile Include="Assets\lightController.cs" />
+    <Compile Include="Assets\menuUI.cs" />
     <Compile Include="Assets\parser.cs" />
     <Compile Include="Assets\playerMovement.cs" />
     <Compile Include="Assets\playerMovement2.cs" />
+    <Compile Include="Assets\playerSceneLoader.cs" />
+    <Compile Include="Assets\protoTypeDialogueManager.cs" />
+    <Compile Include="Assets\protoTypeTrigger.cs" />
+    <Compile Include="Assets\protoTypeUI.cs" />
     <None Include="Assets\NavMeshComponents-master\ProjectSettings\ProjectVersion.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Dialogue Text Files\Shelton.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Jonathan/Documents/Discon Exams/GADE7212/GADE7212POE/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/School/Discon Exams/Hand-Ins/18021728_JonathanAyliffe_GADE7212 (2B)/GADE7212POE/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -12,9 +12,9 @@ public class parser : MonoBehaviour
     Hashtable commands = new Hashtable();
     public Hashtable inv = new Hashtable();
 
-    string[] interpret;
+    string[] inptCommand;
 
-    public GameObject inputTxt;
+    public GameObject inputText;
     public GameObject inputField;
     public GameObject outputText;
     public GameObject player;
@@ -24,7 +24,13 @@ public class parser : MonoBehaviour
     string key;
     string value;
     public PostProcessProfile profile;
+
+    public AudioSource audio;
+    public AudioClip gulp;
+    public AudioClip pickup;
+
    
+
 
     private void Awake()
     {
@@ -37,21 +43,20 @@ public class parser : MonoBehaviour
             _p = this;
         }
 
-        //blank key to give access to any dialoge that has no key
+      
         inv.Add(000, "");
         invM = GameObject.Find("Manager").GetComponent<InventoryManager>();
         player = GameObject.Find("Player");
         shane = GameObject.Find("Shane");
         barman = GameObject.Find("Barman");
         profile = GameObject.Find("PostProcessing").GetComponent<PostProcessVolume>().profile;
-        // pickUp = GetComponent<AudioSource>();
-        
+       
     }
 
     void StoreInput()
     {
-        //storing the input text into the array and splitting it by using space
-        interpret = inputTxt.GetComponent<Text>().text.Split(' ');
+      
+        inptCommand = inputText.GetComponent<Text>().text.Split(' ');
     }
     void Start()
     {
@@ -68,7 +73,7 @@ public class parser : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            inputTxt.SetActive(true);
+            inputText.SetActive(true);
             outputText.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -77,34 +82,30 @@ public class parser : MonoBehaviour
             {
                 inputField.SetActive(false);
 
-                //Arnas.GetComponent<NewDialogueTrigger>().enabled = true;
-                //Depression.GetComponent<NewDialogueTrigger>().enabled = true;
-                //Player.GetComponent<MonologueTrigger>().enabled = true;
+              
             }
             else if (inputField.active == false)
             {
                 inputField.SetActive(true);
 
-                //Arnas.GetComponent<NewDialogueTrigger>().enabled = false;
-                //Depression.GetComponent<NewDialogueTrigger>().enabled = false;
-                //Player.GetComponent<MonologueTrigger>().enabled = false;
+               
             }
         }
     }
     void ToggleUI()
     {
-        inputTxt.SetActive(false);
+        inputText.SetActive(false);
         outputText.SetActive(true);
     }
     void TextOutput()
     {
 
-        if (interpret[0] == "pick" && interpret[1] == "up")
+        if (inptCommand[0] == "pick" && inptCommand[1] == "up")
         {
             key = null;
             value = null;
-            //string array into a single string
-            foreach (string item in interpret)
+          
+            foreach (string item in inptCommand)
             {
                 key += item + " ";
             }
@@ -113,11 +114,21 @@ public class parser : MonoBehaviour
             {
                 if (invM.drink != null && Vector3.Distance(invM.drink.transform.position, player.transform.position) < 3)
                 {
+                    audio.PlayOneShot(pickup, 0.5f);
                     ToggleUI();
                     value = commands[key].ToString();
-                    inv.Add(001, "drink");
+                    if (!inv.Contains(001))
+                    {
+                        inv.Add(001, "drink");
+                    }
+                    
                     outputText.GetComponent<Text>().text = value;
                     GetComponent<InventoryManager>().takeDrink();
+                    ObjectiveManager._OBJMAN.tasks.Remove("Get a drink");
+                    if (!ObjectiveManager._OBJMAN.contains("Talk to Shane"))
+                    {
+                        ObjectiveManager._OBJMAN.tasks.Add("Talk to Shane");
+                    }
                 }
                 else
                 {
@@ -128,19 +139,19 @@ public class parser : MonoBehaviour
 
             }
         }
-        else if (interpret[0] == "walk" && interpret[1] == "to")
+        else if (inptCommand[0] == "walk" && inptCommand[1] == "to")
         {
             key = null;
             value = null;
-            //string array into a single string
-            foreach (string item in interpret)
+          
+            foreach (string item in inptCommand)
             {
                 key += item + " ";
             }
 
             if (key == "walk to barman ")
             {
-                // Vector3 temp = new Vector3(1,0,0);
+             
                 player.GetComponent<NavMeshAgent>().SetDestination(barman.transform.GetChild(0).position);
             } else if (key == "walk to shane ")
             {
@@ -150,21 +161,31 @@ public class parser : MonoBehaviour
 
         }
 
-        else if (interpret[0] == "use")
+        else if (inptCommand[0] == "use")
         {
             key = null;
             value = null;
-            //string array into a single string
-            foreach (string item in interpret)
+        
+            foreach (string item in inptCommand)
             {
                 key += item + " ";
             }
 
-            if (key == "use drink " && inv.ContainsKey(001))
+            if (key == "use drink " && inv.ContainsKey(001) && ObjectiveManager._OBJMAN.contains("Take a drink"))
             {
                 Debug.Log("drinking ");
+                audio.PlayOneShot(gulp, 0.5f);
                 profile.GetSetting<ChromaticAberration>().intensity.Override(1f);
+            
+                ObjectiveManager._OBJMAN.tasks.Remove("Take a drink");
+                ObjectiveManager._OBJMAN.tasks.Add("Go talk to the Barman");
+                barman.GetComponent<GraphDialogueTrigger>().dialogue = Resources.Load<ScriptableDialogue>("barmanDialogue2");
             }
+            else if (key == "use drink " && inv.ContainsKey(001)) {
+                ToggleUI();
+                outputText.GetComponent<Text>().text = "We should save it for later";
+            }
+            
             else
             {
                 ToggleUI();
@@ -172,22 +193,22 @@ public class parser : MonoBehaviour
             }
             
         }
-        if (interpret[0] == "talk" && interpret[1] == "to")
+        if (inptCommand[0] == "talk" && inptCommand[1] == "to")
         {
             key = null;
             value = null;
-            //string array into a single string
-            foreach (string item in interpret)
+        
+            foreach (string item in inptCommand)
             {
                 key += item + " ";
             }
             if (key == "talk to shane " && Vector3.Distance(shane.transform.position, player.transform.position) < 3)
             {
-                shane.GetComponent<NewDialogueTrigger>().start();
+                shane.GetComponent<GraphDialogueTrigger>().start();
             }
             if (key == "talk to barman " && Vector3.Distance(barman.transform.position, player.transform.position) < 3)
             {
-                barman.GetComponent<NewDialogueTrigger>().start();
+                barman.GetComponent<GraphDialogueTrigger>().start();
             }
             else
             {
@@ -200,7 +221,7 @@ public class parser : MonoBehaviour
 
     void AddCommmands()
     {
-        //LOOK AT
+      
         commands.Add("pick up drink ", "A drink has been added");
         commands.Add("use drink ", "You took a sip of your drink");
     }

@@ -46,6 +46,9 @@ public class ObjectiveManager : MonoBehaviour
         }
 
     }
+    public bool contains(string text) {
+        return tasks.Contains(text);
+    }
 
     public void addToEnd() { 
     

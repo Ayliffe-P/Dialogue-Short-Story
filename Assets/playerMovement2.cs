@@ -14,7 +14,21 @@ public class playerMovement2 : MonoBehaviour
     NavMeshAgent mNavMeshAgent;
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.W))
+        {
+            anim.SetBool("Walk", true);
+            anim.SetBool("Idle", false);
+        }
+        else
+        {
+            anim.SetBool("Walk", false);
+            anim.SetBool("Idle", true);
+        }
+        if (Input.GetKey(KeyCode.Escape) && GraphDialogueManager.GDM.inDialogue)
+        {
+            GraphDialogueManager.GDM.EndDialogue();
+        }
+
         Vector3 offset = new Vector3(0.0f, 0.3f, 0.0f);
        Debug.DrawRay(transform.position + offset, transform.forward * 2.5f, Color.green);
         CharacterController controller = GetComponent<CharacterController>();
@@ -23,7 +37,6 @@ public class playerMovement2 : MonoBehaviour
             transform.Rotate(0, Input.GetAxis("Horizontal") * RotateSpeed, 0);
             var forward = transform.TransformDirection(Vector3.forward);
             float curSpeed = Speed * Input.GetAxis("Vertical");
-            //transform.position += Vector3.forward * Time.deltaTime * Speed;
              controller.SimpleMove(forward * curSpeed);
             
         }
@@ -45,46 +58,9 @@ public class playerMovement2 : MonoBehaviour
             shootRay();
         }
 
-            /*  if (Input.GetKey(KeyCode.W))
-              {
-                  anim.SetBool("isWalking", true);
-              }
-              else { anim.SetBool("isWalking", false); }
-          }*/
-        }
-    void FixedUpdate()
-    {
-       /* Vector3 offset = new Vector3(0.0f, 0.3f, 0.0f);
-       
-        // Will contain the information of which object the raycast hit
-        RaycastHit hit;
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("E pressed");
-            if (Physics.Raycast(transform.position + offset, transform.forward, out hit, maxDistance) &&
-                    hit.collider.gameObject.CompareTag("NPC"))
-                
-
-            {
-                Debug.Log("" + hit.collider.gameObject.tag);
-                hit.collider.gameObject.GetComponent<NewDialogueTrigger>().start();
-
-
-
-
-            }
-            if (Physics.Raycast(transform.position + offset, transform.forward, out hit, maxDistance) &&
-                   hit.collider.gameObject.CompareTag("Barman"))
-            {
-                Debug.Log("" + hit.collider.gameObject.tag);
-                hit.collider.gameObject.GetComponent<NewDialogueTrigger>().start();
-            }
-        }
-        // if raycast hits, it checks if it hit an object with the tag Player
         
-        */
-    }
-
+        }
+  
     public void shootRay() {
         Vector3 offset = new Vector3(0.0f, 0.3f, 0.0f);
        Debug.DrawRay(transform.position + offset, transform.forward * 1.5F, Color.green);
@@ -99,7 +75,7 @@ public class playerMovement2 : MonoBehaviour
 
             {
                 Debug.Log("" + hit.collider.gameObject.tag);
-                hit.collider.gameObject.GetComponent<NewDialogueTrigger>().start();
+                hit.collider.gameObject.GetComponent<GraphDialogueTrigger>().start();
 
 
 
@@ -109,7 +85,7 @@ public class playerMovement2 : MonoBehaviour
                    hit.collider.gameObject.CompareTag("Barman"))
             {
                 Debug.Log("" + hit.collider.gameObject.tag);
-                hit.collider.gameObject.GetComponent<NewDialogueTrigger>().start();
+                hit.collider.gameObject.GetComponent<GraphDialogueTrigger>().start();
             }
            
         }

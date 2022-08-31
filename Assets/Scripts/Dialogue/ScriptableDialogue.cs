@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//
 using System;
 using System.Linq;
 
@@ -13,10 +12,10 @@ public class ScriptableDialogue : ScriptableObject
     public List<DialogueNodeData> NodeData = new List<DialogueNodeData>();
     int totalEdges;
     
-    //method to retun all adjacent nodes
+   
     public List<EdgeData> ReturnValidEdges(DialogueNodeData current)
     {
-        List<EdgeData> edges = GraphEdges.Where(x=>x.firstNodeID == current.nodeID).ToList();
+        List<EdgeData> edges = GraphEdges.Where(x=>x.firstNodeID == current.nodeID ).ToList();
         List<DialogueNodeData> nodes = new List<DialogueNodeData>();
 
         edges.ForEach(e => NodeData.Where(n => n.nodeID == e.secondNodeID && parser.P.inv.ContainsKey(Int32.Parse(n.dialogueKey))).ToList().ForEach(n => nodes.Add(n)));

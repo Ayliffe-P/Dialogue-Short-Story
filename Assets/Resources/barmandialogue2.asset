@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b3dab38db94042a6032d666a689ba, type: 3}
+  m_Name: barmandialogue2
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: 4f7369b9-8484-4d62-9dac-eb05dd4ebbe0
+    portName: StartNodeEdge
+    secondNodeID: 9bdb192f-a9c3-410f-858b-4220d99a50c7
+  - firstNodeID: 9bdb192f-a9c3-410f-858b-4220d99a50c7
+    portName: ....hheelp
+    secondNodeID: faaae59a-31c2-4782-8c08-3903c7547c91
+  - firstNodeID: faaae59a-31c2-4782-8c08-3903c7547c91
+    portName: ...ttthank....youuu...
+    secondNodeID: 77b02160-d2b3-4c26-b936-fb4a01964acf
+  NodeData:
+  - nodeID: 9bdb192f-a9c3-410f-858b-4220d99a50c7
+    dialogueTxt: Wow you dont look good! I think your drink has been spiked.
+    dialogueKey: 000
+    position: {x: 388, y: 191}
+  - nodeID: faaae59a-31c2-4782-8c08-3903c7547c91
+    dialogueTxt: Okay Hold on, here take this and Let me get you a lift home.
+    dialogueKey: 000
+    position: {x: 1137, y: 190}
+  - nodeID: 77b02160-d2b3-4c26-b936-fb4a01964acf
+    dialogueTxt: EndThree
+    dialogueKey: 000
+    position: {x: 1716, y: 185}

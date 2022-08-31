@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d3b3dab38db94042a6032d666a689ba, type: 3}
+  m_Name: flufftext4
+  m_EditorClassIdentifier: 
+  GraphEdges:
+  - firstNodeID: fd6306b1-8e00-4713-b0fb-65b92954e3a0
+    portName: StartNodeEdge
+    secondNodeID: 9519f037-f701-4b9e-82e7-0b3eb14ec03d
+  - firstNodeID: 9519f037-f701-4b9e-82e7-0b3eb14ec03d
+    portName: Are you kidding me? Look at these moves
+    secondNodeID: 02caf325-e7ba-4b8c-ad2e-29c5e319dde7
+  - firstNodeID: 02caf325-e7ba-4b8c-ad2e-29c5e319dde7
+    portName: Now show me your!
+    secondNodeID: c00cc89a-7c21-4b89-95ae-39cb22cdf79a
+  - firstNodeID: 02caf325-e7ba-4b8c-ad2e-29c5e319dde7
+    portName: Thanks! Enjoy!
+    secondNodeID: c00cc89a-7c21-4b89-95ae-39cb22cdf79a
+  NodeData:
+  - nodeID: 9519f037-f701-4b9e-82e7-0b3eb14ec03d
+    dialogueTxt: Show me your moves
+    dialogueKey: 000
+    position: {x: 311, y: 184}
+  - nodeID: 02caf325-e7ba-4b8c-ad2e-29c5e319dde7
+    dialogueTxt: Damn Straight! Those are some pretty good moves
+    dialogueKey: 000
+    position: {x: 878, y: 154}
+  - nodeID: c00cc89a-7c21-4b89-95ae-39cb22cdf79a
+    dialogueTxt: End
+    dialogueKey: 000
+    position: {x: 1445, y: 161}

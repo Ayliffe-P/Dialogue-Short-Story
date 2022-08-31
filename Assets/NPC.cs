@@ -10,7 +10,7 @@ public abstract class NPC : MonoBehaviour
     public Transform target;
     public Animator anim;
     public SpriteRenderer spriteR;
-    public System.Random rnd = new System.Random();
+    public static System.Random rnd = new System.Random();
     public NavMeshAgent agent;
 
     
@@ -26,7 +26,7 @@ public abstract class NPC : MonoBehaviour
     
     public ScriptableDialogue RandomScriptableDialogue() {
 
-        int num = rnd.Next(0, 5);
+        int num = rnd.Next(1, 5);
 
         switch (num)
         {
@@ -34,11 +34,11 @@ public abstract class NPC : MonoBehaviour
                 return Resources.Load<ScriptableDialogue>("fluffText1");
                
             case 2:
-                return Resources.Load<ScriptableDialogue>("fluffText1");
+                return Resources.Load<ScriptableDialogue>("fluffText2");
             case 3:
-                return Resources.Load<ScriptableDialogue>("fluffText1");
+                return Resources.Load<ScriptableDialogue>("fluffText3");
             case 4:
-                return Resources.Load<ScriptableDialogue>("fluffText1");
+                return Resources.Load<ScriptableDialogue>("fluffText4");
 
         }
 
@@ -69,7 +69,7 @@ public abstract class NPC : MonoBehaviour
         agent.SetDestination(trans.position);
         anim.SetBool("Walk", true);
         anim.SetBool("Dancing", false);
-        //ObjectiveManager._OBJMAN.tasks.Remove("Talk to Shane");
+    
 
         while (CheckIfDestinationReached() == false)
         {
@@ -77,10 +77,6 @@ public abstract class NPC : MonoBehaviour
         }
         anim.SetBool("Walk", false);
         anim.SetBool("Dancing", true);
-        //GameObject.Find("Manager").GetComponent<InventoryManager>().spawnDrink();
-        //GetComponent<NavMeshAgent>().ResetPath();
-        //Debug.Log("Working");
-
     }
 
     // Update is called once per frame
@@ -90,12 +86,12 @@ public abstract class NPC : MonoBehaviour
 
         if (Vector3.Dot(toTarget, transform.forward) > 0)
         {
-           // anim.SetBool("Walk", true);
+  
             anim.SetBool("FacingFront", true);
         }
         else
         {
-           // anim.SetBool("Walk", true);
+
             anim.SetBool("FacingFront", false);
         }
         

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarmanDialogueTrigger : NewDialogueTrigger
+public class BarmanDialogueTrigger : GraphDialogueTrigger
 {
     private InventoryManager invMan;
 
@@ -14,7 +14,7 @@ public class BarmanDialogueTrigger : NewDialogueTrigger
     // Update is called once per frame
     void Update()
     {
-        if (NewDialogueManager.DLM.spawnDrink)
+        if (GraphDialogueManager.GDM.spawnDrink)
         {
             invMan.spawnDrink();
             Debug.Log("called Spawn");
